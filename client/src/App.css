@@ -142,9 +142,11 @@ p {
   margin-top: 32px;
   padding: 24px;
   background-color: #cf0;
+  color: black;
 }
 .dark-mode .success-message {
   background-color: forestgreen;
+  color: mintcream;
 }
 
 form {

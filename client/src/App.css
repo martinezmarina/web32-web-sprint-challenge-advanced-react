@@ -1,5 +1,6 @@
 body {
   background: #0e101c;
+  color:#fff;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
     "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
@@ -13,10 +14,24 @@ body {
   justify-content: space-between;
   align-items: center;
 }
+.dark-mode .container {
+  border-bottom: 1px solid forestgreen;
+}
+.toggle {
+  background: #cf0;
+  position: relative;
+  color:black;
+}
+.dark-mode .toggle {
+  background: forestgreen;
+}
+.dark-mode {
+  background-color: honeydew;
+  color: black;
+}
 
 h1 {
   font-weight: 100;
-  color: white;
   text-align: center;
   font-size: 2rem;
 }
@@ -27,12 +42,14 @@ h1 {
   right: -8px;
   border-radius: 50%;
   background-color: #ec5990;
-  color: #fff;
   display: inline-block;
   padding-left: 6px;
   padding-right: 6px;
   font-size: 0.6rem;
   text-align: center;
+}
+.dark-mode .cart-badge {
+  background-color: mediumvioletred;
 }
 
 .plant-list {
@@ -56,7 +73,6 @@ h1 {
 
 .plant-details {
   padding: 0 32px 0 16px;
-  color: #fff;
   font-weight: 200;
   display: flex;
   flex-flow: column nowrap;
@@ -101,6 +117,9 @@ p {
   margin: 0 auto;
   border-bottom: 1px solid #cf0;
 }
+.dark-mode .cart > .plant-card {
+  border-bottom: forestgreen;
+}
 
 .cart .plant-image {
   height: 160px;
@@ -111,7 +130,6 @@ p {
 }
 
 .checkout-section {
-  color: #fff;
   padding: 32px 0;
   display: flex;
   flex-flow: column nowrap;
@@ -124,10 +142,14 @@ p {
   margin-top: 32px;
   padding: 24px;
   background-color: #cf0;
+  color: black;
+}
+.dark-mode .success-message {
+  background-color: forestgreen;
+  color: mintcream;
 }
 
 form {
-  background: #0e101c;
   max-width: 400px;
   margin: 0 auto;
 }
@@ -141,6 +163,12 @@ input {
   padding: 10px 15px;
   margin-bottom: 10px;
   font-size: 14px;
+}
+.dark-mode input{
+  border: 1px solid black;
+}
+.dark-mode label{
+  color: black;
 }
 
 label {
@@ -165,9 +193,15 @@ button {
   font-weight: 100;
   cursor: pointer;
 }
+.dark-mode button{
+  background: mediumvioletred;
+}
 
 button:hover {
   background: #df2e6c;
+}
+.dark-mode button:hover{
+  background: purple;
 }
 
 button:active,
@@ -203,7 +237,6 @@ hr {
 }
 
 h2 {
-  color: white;
   font-weight: 200;
 }
 
@@ -242,7 +275,9 @@ pre {
   margin-right: 15px;
   position: relative;
 }
-
+.dark-mode .steps li {
+  background: forestgreen;
+}
 .steps li:last-child {
   border: none;
 }

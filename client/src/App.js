@@ -6,8 +6,10 @@ import ShoppingCart from "./components/ShoppingCart";
 import CheckoutForm from "./components/CheckoutForm";
 
 import "./App.css";
+import { useDarkMode } from "./hooks/useDarkMode";
 
 function App() {
+  const [darkMode, toggleDarkMode] = useDarkMode(false);
   // array of plants that have been added to the cart
   const [cart, setCart] = useState([]);
 
@@ -42,6 +44,12 @@ function App() {
                 </span>
               </NavLink>
             </li>
+              <li className="dark-mode_toggle">
+                <span
+                onClick={toggleDarkMode}
+                className={darkMode ? 'toggle toggled' : 'toggle'}>Dark Mode</span>
+              </li>
+            
           </ul>
         </nav>
         <Route
